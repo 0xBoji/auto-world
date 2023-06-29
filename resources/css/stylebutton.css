@@ -1,0 +1,146 @@
+img {
+  height:150px;
+  width:200px;
+  border-radius: 6px;
+}
+.tooltip{
+  width: 110px;
+  height: 60px;
+ }
+.cssbuttons-io-button {
+
+  width: 65px;
+display: flex;
+align-items: center;
+font-family: inherit;
+font-weight: 500;
+font-size: 16px;
+padding: 0.7em 1.4em 0.7em 1.1em;
+color: white;
+background: #ad5389;
+background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+border: none;
+box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+letter-spacing: 0.05em;
+border-radius: 20em;
+text-decoration: none;
+}
+button {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 1em;
+border: 0px solid transparent;
+color: blue;
+border-radius: 1.25em;
+transition: all 0.2s linear;
+}
+
+button:hover {
+
+background: #1016c262;
+
+}
+
+.tooltipp {
+position: relative;
+display: inline-block;
+height: 55px;
+width: 93px;
+}
+
+.tooltipp .tooltipptext {
+visibility: hidden;
+width: 4em;
+background-color: rgba(241, 13, 13, 0.253);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+top: 25%;
+left: 110%;
+}
+
+.tooltipp .tooltipptext::after {
+content: "";
+position: absolute;
+top: 50%;
+right: 100%;
+margin-top: -5px;
+border-width: 5px;
+border-style: solid;
+border-color:  rgba(243, 14, 14, 0.253);
+}
+.tooltipp svg{
+  color:#fff;
+margin-top:5px;
+}
+.cssbuttons-io-button svg {
+margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+.buttonn {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 8px 12px;
+gap: 2px;
+height: 40px;
+width: 70px;
+border: none;
+background: #a549da3d;
+border-radius: 30px;
+cursor: pointer;
+text-decoration: none;
+}
+
+.lablee {
+line-height: 22px;
+font-size: 19px;
+color: #A649DA;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+.lable2 {
+bottom: 7px;
+line-height: 20px;
+font-size: 19px;
+color: #fbfbfb;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+.buttonn:hover {
+background: #a549da62;
+}
+
+.buttonn:hover .svg-icon {
+animation: lr 1s linear infinite;
+}
+
+@keyframes lr {
+0% {
+transform: translateX(0);
+}
+
+25% {
+transform: translateX(-1px);
+}
+
+75% {
+transform: translateX(1px);
+}
+
+100% {
+transform: translateX(0);
+}
+}
