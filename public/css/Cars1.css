@@ -1,0 +1,81 @@
+.heading{
+    text-align: center;
+}
+
+.heading p {
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    background-color: #000000;
+}
+.cars-container .box {
+    flex: 1 1 17rem;
+    position: relative;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.cars-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cars-container .box img:hover {
+transform: scale(1.1);
+transition: 0.5s;
+}
+.cars-container .box h2{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: #eaeaea;
+    padding: 8px;
+    border-radius: 0.5rem;
+    color:black;
+}
+.cars-container .box:hover h2{
+    background: red;
+    color: white;
+}
+#nut{
+    margin-top: 50px;
+    margin-left: 87%;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    border: 0.5rem;
+    background-color: red;
+}
+#nut a{
+    color:white
+}
+#nut:hover{
+    background-color: rgb(227, 85, 85);
+    color: white;
+}
+#nut a:hover{
+    color: white;
+}
+
+.carsfont{
+    font-size: 48px;
+	font-family: sans-serif;
+	padding-bottom: 30px;
+    color: red;
+}
+.carsh2{
+    font-size: 30px;
+	font-family: sans-serif;
+	padding-bottom: 30px;
+    color: red;
+}
+#parts{
+    background-color: #000000;
+}

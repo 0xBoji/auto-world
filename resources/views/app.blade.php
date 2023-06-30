@@ -1,7 +1,7 @@
 <html>
 <head>
     @vite('resources/js/app.js')
-    {{-- @vite('resources/js/nav.js') --}}
+    @vite('resources/js/Adminupload.js')
 
 	<title></title>
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -13,80 +13,6 @@
 
 
 <body>
-	<style>
-		
-		.container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-      }
-      input[type="file"] {
-        position: absolute;
-        z-index: -1;
-        top: 10px;
-        left: 8px;
-        font-size: 17px;
-        color: #b8b8b8;
-      }
-      .button-wrap {
-        position: relative;
-      }
-      .button {
-        display: inline-block;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 5px;
-        background-color: rgb(88,78,225);
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-      }
-
-		.dropdown {
-			position: relative;
-			display: inline-block;
-			height:35px;
-		}
-	
-		.dropdown .dropdown-menu {
-			display: none;
-			position: absolute;
-			right: 0;
-			background-color: #f9f9f9;
-			min-width: 70px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-	
-		.dropdown:hover .dropdown-menu {
-			display: block;
-	
-		}
-	
-		.caret {
-			display: inline-block;
-			width: 0;
-			height: 0;
-			margin-left: 2px;
-			vertical-align: middle;
-			border-right: 4px solid transparent;
-			border-left: 4px solid transparent;
-		}
-		#navbarDropdown{
-		  color:rgb(247,64,59);
-		  text-decoration: none;
-		}
-		#logout {
-        position: fixed;
-        bottom: 0;
-        }
-        #admin {
-            position: fixed;
-            bottom: 59px;
-        }	
-	</style>
-
 	<div id="mySidenav" class="sidenav">
 	<p class="logo"><span>AutoWorld</span></p>
 	<a  href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
@@ -123,17 +49,29 @@
 			<br/>
 			<br>
 <!-- resources/views/app.blade.php -->
-			<form method="post" action="/admin/upload" enctype="multipart/form-data">
-				@csrf
-				<div class="container">
-					<div class="button-wrap">
+		<form method="post" action="/admin/upload" enctype="multipart/form-data" onsubmit="return validateForm()">
+			@csrf
+			<div class="container">
+				<div class="button-wrap">
 					<label class="button" for="upload">Upload File <br></label>
 					<input id="upload" name="avatar" type="file">
-					</div>
-				</div>  
-				<br>	
-				<button type="submit">Upload!</button>
-			</form>
+				</div>
+			</div>
+			<br>
+			<button type="submit">Upload!</button>
+		</form>
+
+	<script>
+	function validateForm() {
+		var fileInput = document.getElementById("upload");
+		if (fileInput.files.length === 0) {
+			alert("Image can't be null");
+			return false; // Prevent form submission
+		}
+		return true; // Proceed with form submission
+	}
+	</script>
+
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>	

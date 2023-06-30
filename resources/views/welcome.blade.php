@@ -17,7 +17,7 @@
                 box-sizing: border-box;
                 }
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 767px) {  
             .item {
                 flex: 0 0 100%; /* Khi màn hình nhỏ hơn, một cột trên mỗi hàng */
                     }
@@ -50,7 +50,7 @@
                         <p>Brand: ${car.carBrand}</p>
                         <p>Model: ${car.carModel}</p>
                         <p>Price: ${car.carPrice}</p>
-                        <p>Year: ${car.carYear}</p>
+                        <select><option>Year: ${car.carYear}</option></select>
                         <img src="upload/${car.carImage}" alt="Car Image" />
                     `;
 

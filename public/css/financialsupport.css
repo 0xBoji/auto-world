@@ -1,0 +1,187 @@
+.col-md-8{
+    margin-left: 368px;
+}
+
+.banglaisuat{
+    width: 100%;
+}
+
+.shadow-section{
+    box-shadow: 0 2px 4px 2px rgba(0,0,0,.05);
+}
+
+.bg-white{
+    background-color: #fff !important;
+}
+.title-info{
+    color: white;
+}
+.noidung{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    display: flex;
+    left: 0px;
+    width: 100%;
+}
+
+.noidung .title-info{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-left: 105px;
+    padding-top: 20px;
+}
+
+
+/* thông tin của khung bảng lãi suất */
+.box-size{
+    max-width: 300px;
+    margin-left: 284px;
+    margin-right: auto;
+}
+
+/* form */
+.form-group{
+    padding-bottom: 15px;
+}    
+.banglaisuat .noidung .form-group .input{
+    background-color: #F92525;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+.banglaisuat .noidung .form-group .input::placeholder{
+    color: white;
+}
+.banglaisuat .noidung .form-group .input::-ms-value{
+    color: white;
+}
+.form-control-1{
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.noidung  .bg-red{
+    color: #fff;
+    background-color: #F92525;
+    border-radius: 5px;
+}
+
+.noidung .bg-red::placeholder{
+    color: white;
+}
+
+input.form-control-1, select.form-control-1{
+    height: 40px;
+    color: #434445;
+    font-weight: 500;
+}
+
+.box-size-1{
+    padding-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-editor li{
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.boxketqua{
+    font-family: sans-serif;
+
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.button-center{
+    margin-left:;
+    margin-bottom: 20px;
+}
+
+.button-center input{
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(207, 31, 31);
+    color: white;
+}
+
+.button-center input:hover{
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: #434445;
+    color: white;
+}
+
+/* bank */
+.all-bank{
+    display: flex;
+    text-align: center;
+}
+.one_bank{
+    display: flex;
+    margin-right: 50px;
+    height: 50px;
+   
+}
+.logo_bank img{
+    width: 50px;
+    height: auto;
+    
+}
+.logo_bank{
+  display: flex;
+}
+.bank{
+    
+}
+.font{
+    font-size: 25px;
+     line-height: 40px;
+}
+.step{
+    color: rgb(204, 31, 31);
+    margin-top: 20px;
+    font-size: 30px;
+}
+.introduce{
+    color: white;
+}
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+.information{
+    width: 50%;
+}
+
+
+.button-check{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F92525;
+    margin-top:30px;
+    margin-left: 70px;
+}

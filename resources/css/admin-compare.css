@@ -1,0 +1,48 @@
+    .scrollable-table {
+        max-height: 600px; /* Chiều cao tối đa của bảng */
+        overflow: auto; /* Tạo thanh cuộn khi nội dung vượt quá chiều cao */
+    }
+    .note-editor {
+        background-color: #ffffff;
+    }
+    #logout { 
+    position: fixed;
+    bottom: 0;
+    }
+    #admin {
+        position: fixed;
+        bottom: 59px;
+    }
+    .uploadfile {
+     display: none; /* Hide the default file input */
+    }
+
+    .custom-upload {
+        display: inline-block;
+        background-color: #e0e0e0;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .custom-upload:hover {
+        background-color: #ccc;
+    }
+
+    .file-name {
+        margin-top: 8px;
+    }
+
+    .uploadfile{ 
+        width: 13%;
+    }
+    label, input, textarea{
+        display: block;	
+    }
+    #text{
+        color: #ffffff;
+    }
+    #text1{
+        color:aliceblue;
+    }

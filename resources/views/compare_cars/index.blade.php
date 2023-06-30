@@ -9,52 +9,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite('resources/js/Admincompare.js')
+
 </head>
 
 
 <body>
-    <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-    
-        .dropdown .dropdown-menu {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 70px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-    
-        .dropdown.show .dropdown-menu {
-            display: block;
-        }
-    
-        .caret {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            margin-left: 2px;
-            vertical-align: middle;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;
-        }
-        #navbarDropdown {
-            color:rgb(247,64,59);
-            text-decoration: none;
-        }
-        #logout {
-        position: fixed;
-        bottom: 0;
-        }
-        #admin {
-            position: fixed;
-            bottom: 59px;
-        }
-    </style>
 	<div id="mySidenav" class="sidenav">
 	<p class="logo"><span>AutoWorld</span></p>
         <a  href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
@@ -63,15 +23,14 @@
         <a href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Image</a>
         <a id="admin" class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fa-solid fa-user-shield"></i>
             &nbsp; {{ Auth::user()->name }} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="caret"></span>
-         </a>
- 
-         <div>
-         <a id="logout" href="{{ route('logout') }}"  onclick="event.preventDefault();
-         document.getElementById('logout-form').submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</a>
-         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-         @csrf
-         </form>
-         </div>
+        </a>
+        <div>
+        <a id="logout" href="{{ route('logout') }}"  onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+        </form>
+        </div>
 </div>
 <div id="main">
 

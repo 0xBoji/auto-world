@@ -1,0 +1,139 @@
+/* cái khung */
+.container-fluid.top-section{
+    padding: 0;
+    background-color: papayawhip;
+    padding-right: 26px;
+    border: solid 1px;
+    margin-bottom: 50px;
+}
+.container-fluid.top-section img{
+    max-width: 100%;
+}
+.container-fluid{
+    width: 100%;
+}
+
+/* bla bla banner */
+.row{
+
+    flex-wrap: wrap;
+
+}
+.anhbanner{
+    background-image: url('../img/goodyearbanner.jpg');
+    width: 640px;
+    height: 427px;
+    margin-left: -83px;
+    border-radius: 10px;
+}
+/* logo */
+.logoGY{
+    background-image: url('../img/logoGY.jpg');
+    border-radius: 100% !important;
+    width: 100px;
+    height: 100px;
+    margin-left: -150px;
+}
+
+.logoGY1{
+    background-image: url('../img/logoGY.jpg');
+    border-radius: 100% !important;
+    width: 100px;
+    height: 100px;
+    margin-left: 513px;
+}
+
+/* nội dung chữ bên phải*/
+.col-md-6.all-info{
+    padding-top: 30px;
+    position: relative;
+}
+
+.single-post-title{
+    margin-left: -45px;
+    margin-top: -80px;
+}
+.single-post-title span{
+    position: relative;
+    font-family: 'barlow';
+    color: black;
+    font-size: 51px;
+}
+
+.col-md-6{
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.address{
+    margin-top: 40px;
+    margin-left: -150px;
+}
+
+.arrowicon{
+    color: black;
+    font-size: 25px;
+}
+
+.address a{
+    font-style: italic;
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 25px;
+}
+.diachi{
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.all-info hr{
+    margin-left: -155px;
+}
+
+.short-info.row{
+    margin-top: 10px;
+    margin-left: -160px;
+    font-family: sans-serif;
+}
+
+span{
+    font-size: 25px;
+}
+
+.support-info span:first-child{
+    width: 25%;
+}
+
+.support-info{
+    margin-right: -2100px;
+}
+
+.support-info span{
+    display: inline-block;
+    margin-bottom: -14px;
+}
+
+span .support-info-detail{
+    vertical-align: middle;
+}
+
+span.support-info-detail p{
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0 !important;
+}
+
+a#hotline {
+    color: #b62831;
+    font-weight: 500;
+}
+
+.icon{
+    color: #b62831;
+}
+.noidung{
+    color: white;
+}
+

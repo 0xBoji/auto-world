@@ -4,6 +4,7 @@
     <title>Create Contact</title>
     @vite('resources/js/app.js')
     @vite('resources/js/nav.js')
+    @vite('resources/js/Admincompare.js')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -11,94 +12,6 @@
 
 </head>
 <body>
-    <style>
-          #logout {
-        position: fixed;
-        bottom: 0;
-        }
-        #admin {
-            position: fixed;
-            bottom: 59px;
-        }
-        .uploadfile {
-         display: none; /* Hide the default file input */
-        }
-
-        .custom-upload {
-        display: inline-block;
-        background-color: #e0e0e0;
-        color: #333;
-        padding: 8px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        }
-
-        .custom-upload:hover {
-        background-color: #ccc;
-        }
-
-        .file-name {
-        margin-top: 8px;
-        }
-
-                .uploadfile{ 
-                    width: 13%;
-                }
-        label, input, textarea{
-            display: block;	
-        }
-        select{
-            height:35px;
-        }
-        input:focus, textarea:focus{
-            border: solid 3px #77bde0;	
-        }
-
-        textarea{
-            height: 100px;	
-            resize: none; 
-            overflow: auto;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-    
-        .dropdown .dropdown-menu {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 70px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-    
-        .dropdown.show .dropdown-menu {
-            display: block;
-        }
-    
-        .caret {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            margin-left: 2px;
-            vertical-align: middle;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;
-        }
-        #navbarDropdown {
-            color:rgb(247,64,59);
-            text-decoration: none;
-        }
-        #text{
-            color: #ffffff;
-        }
-        #text1{
-            color:aliceblue;
-        }
-        
-    </style>
     <div id="mySidenav" class="sidenav">
         <p class="logo"><span>AutoWorld</span></p>
         <a  href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>

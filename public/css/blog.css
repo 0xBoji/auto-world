@@ -1,0 +1,62 @@
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.blog-container .box{
+    flex: 1 1 13rem;
+    padding: 5px;
+}
+.blog-container .box:hover{
+    background: #181717;
+
+}
+.blog-container .box span{
+    font-size: 0.8rem;
+    color: red;
+}
+.blog-container .box h3{
+    font-size: 1.2rem;
+}
+.blog-container .box p{
+    font-size:14px;
+    margin: 4px 0;
+}
+.blog-container .box .blog-btn{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    color: rgb(239, 236, 236);
+}
+.blog-container .box .blog-btn .bx{
+    font-size: 20px;
+}
+.blog-container .box .blog-btn:hover{
+    color: red;
+    column-gap: 0.7rem;
+    transition: 0.4s;
+}
+.v1{
+    margin-left: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fontt{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+    font-size: 25px;
+}
+#kichco{
+    height: 250px;
+    width: 400px;
+}
+.blog{
+    text-align: center;
+}
+.carsfont{
+    font-size: 48px;
+	font-family: sans-serif;
+	padding-bottom: 30px;
+    color: red;
+}

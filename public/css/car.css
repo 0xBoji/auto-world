@@ -1,0 +1,182 @@
+.introduce{
+    padding: 10px;
+    border-radius: 3px;
+   
+    
+}
+
+
+.noidung{
+    text-align: justify;
+    font-family: Arial;
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.noidung p{
+    padding-left: 30px;
+    padding-right: 35px;
+    padding-top: 10px;
+}
+
+.bg-antiquewhite{
+    background-color: rgb(253, 253, 253);
+    margin-bottom: 30px;
+}
+.bg-antiquewhite:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.tieude-18{
+    font-size: 25px !important;
+    padding-left: 20px;
+}
+
+.bangthongtin{
+    margin-bottom: 20px;
+}
+
+.bangthongtin .outer{
+    position: relative;
+    border: 1px solid #e5e5e5;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.bangthongtin .inner{
+    backface-visibility: hidden ;
+    max-height: 500px;
+}
+
+.scroll-wrapper{
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.scroll-wrapper>.scroll-content{
+    border: none !important;
+    box-sizing: content-box !important;
+    left: 0;
+    margin: 0;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+
+.test1{
+    height: auto;
+    margin-bottom: 0px;
+    max-height: 94px;
+}
+
+.content table{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 15px;
+    position: relative;
+    border-collapse: collapse;
+}
+.bangthongtin .tbl-data{
+    margin-bottom: 0 !important;
+}
+
+.bangthongtin .tbl-data thead{
+    position: relative;
+    z-index: 11;
+}
+
+.bangthongtin .tbl-data .th-name{
+    width: 150px;
+    left: 0;
+    z-index: 2;
+    background-color: darkgray;
+    border-left: 0;
+}
+
+.bangthongtin .tbl-data th{
+    border-right: 1px solid black;
+    background-color: azure;
+    font-weight: 700;
+    padding: 15px 10px !important;
+    text-align: left;
+    position: sticky;
+    top: -1px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #222;
+    white-space: nowrap;
+}
+
+.bangthongtin .tbl-data td:first-child{
+    background-color: #f3f5f6 !important;
+    padding-left: 10px;
+    position: sticky;
+    left: -1px;
+}
+
+.block-table-data .tbl-data .td-name{
+    z-index: 1;
+    background-color: darkgray;
+    border-left: 0;
+}
+
+.bangthongtin .tbl-data td{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 16px;
+    line-height: 21px;
+    color: #222;
+    padding: 10px !important;
+    white-space: nowrap;
+}
+
+.thong-so-kt .grid__2{
+    column-gap: 30px;
+    row-gap: 30px;
+    
+}
+
+.grid__2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__2 ul li {
+    list-style-type: none;
+} 
+
+.thong-so-kt ul li {
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+.R{
+    width: 147px;
+    height:100px;
+}
+.R:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+#photo{
+    width: 100%;
+    height: 500px;
+}
+h1{
+    text-align: center;
+    color: red;
+    margin-bottom: 1rem;
+    
+}
+.content-detail h3{
+    text-align: center;
+    color: red;
+}

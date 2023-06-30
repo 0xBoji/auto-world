@@ -64,7 +64,16 @@
     
     
     </style>
-
+    <script>
+        function validateForm() {
+		var fileInput = document.getElementById("upload");
+		if (fileInput.files.length === 0) {
+			alert("Image can't be null");
+			return false; // Prevent form submission
+		}
+		return true; // Proceed with form submission 
+    }
+    </script>
 	<div id="mySidenav" class="sidenav">
 	<p class="logo"><span>AutoWorld</span></p>
     <a id="point" href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>

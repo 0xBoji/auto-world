@@ -16,16 +16,18 @@ return new class extends Migration
         Schema::create('compare_cars', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('image');
-            $table->string('body_style');
-            $table->string('engine_type');
-            $table->string('fuel');
-            $table->string('year_of_manufacture');
-            $table->string('transmission');
-            $table->string('seating_capacity');
-            $table->string('number_of_doors');
-            $table->string('price');
-            $table->string('origin');
+            $table->string('brands')->nullable();
+            $table->string('image')->nullable();
+            $table->string('body_style')->nullable();
+            $table->string('engine_type')->nullable();
+            $table->string('fuel')->nullable();
+            $table->string('year_of_manufacture')->nullable();
+            $table->string('transmission')->nullable();
+            $table->string('seating_capacity')->nullable();
+            $table->string('number_of_doors')->nullable();
+            $table->string('price')->nullable();
+            $table->string('origin')->nullable();
+            $table->longText('description')->nullable();
         });
     }
 

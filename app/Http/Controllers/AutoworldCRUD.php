@@ -68,13 +68,19 @@ class AutoworldCRUD extends Controller
     return view('app')->with('data', $data);
 }
     
-    public function doupload(Request $request)
-    {
-        $file= $request->file('avatar');
-        $filename= $file->getClientOriginalName();
-        $file->storeAs('upload', $filename); 
-        $file->move(public_path('upload'),$filename); 
-        return redirect('/admin/upload');
+public function doupload(Request $request)
+{
+    if ($request->hasFile('avatar')) {
+        $file = $request->file('avatar');
+        $filename = $file->getClientOriginalName();
+        $file->storeAs('upload', $filename);
+        $file->move(public_path('upload'), $filename);
+    } else {
+        // Người dùng không chọn tệp tin, hiển thị thông báo "image null"
+        return "image null";
     }
-   
+    
+    return redirect('/admin/upload');
+}
+
 }

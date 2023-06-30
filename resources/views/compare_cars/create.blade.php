@@ -4,100 +4,29 @@
     <title>Create Contact</title>
     @vite('resources/js/app.js')
     @vite('resources/js/nav.js')
+    @vite('resources/js/Admincompare.js')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <style>
-          #logout { 
-        position: fixed;
-        bottom: 0;
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
         }
-        #admin {
-            position: fixed;
-            bottom: 59px;
-        }
-        .uploadfile {
-         display: none; /* Hide the default file input */
-        }
-
-        .custom-upload {
-        display: inline-block;
-        background-color: #e0e0e0;
-        color: #333;
-        padding: 8px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        }
-
-        .custom-upload:hover {
-        background-color: #ccc;
-        }
-
-        .file-name {
-        margin-top: 8px;
-        }
-
-                .uploadfile{ 
-                    width: 13%;
-                }
-        label, input, textarea{
-            display: block;	
-        }
-        select{
-            height:35px;
-        }
-        input:focus, textarea:focus{
-            border: solid 3px #77bde0;	
-        }
-
-        textarea{
-            height: 100px;	
-            resize: none; 
-            overflow: auto;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-    
-        .dropdown .dropdown-menu {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 70px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-    
-        .dropdown.show .dropdown-menu {
-            display: block;
-        }
-    
-        .caret {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            margin-left: 2px;
-            vertical-align: middle;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;
-        }
-        #navbarDropdown {
-            color:rgb(247,64,59);
-            text-decoration: none;
-        }
-        #text{
-            color: #ffffff;
-        }
-        #text1{
-            color:aliceblue;
+        
+        .form-row > * {
+            flex-basis: calc(33.33% - 10px);
+            margin-bottom: 10px;
         }
     </style>
+</head>
+<body>
+    
     <div id="mySidenav" class="sidenav">
         <p class="logo"><span>AutoWorld</span></p>
         <a  href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
@@ -125,6 +54,8 @@
         </div>
         <div class="clearfix"></div>
         </div>
+        <div class="scrollable-table">
+
         <form method="post" action="/create" enctype="multipart/form-data">
             @csrf
             <br>
@@ -140,7 +71,21 @@
                     document.getElementById('carImage').setAttribute('value', fileName);
                 }
             </script>
-            
+            <br>
+            <div class="form-row">
+            <label id="text" for="brands">Brands</label>
+            <select name="brands" id="brands">
+                <option value="Toyota">Toyota</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Bwm">Bwm</option>
+                <option value="Audi">Audi</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Suzuki">Suzuki</option>
+                <option value="Mazda">Mazda</option>
+            </select>
             <label id="text" for="body_style">Image</label>
             <input type="text" onchange="displayFileName(this)" name="image" id="carImage" required>
             <label id="text" for="body_style">Body Style:</label>
@@ -190,8 +135,39 @@
                 <option value="Germany">Germany</option>
                 <option value="USA">USA</option>
             </select>
-            <button class="buttonSub" type="submit">Submit</button>
+            <label id="text" for="Description">Description</label>
+            <br>
+            <textarea class="note-editor" name="description" id="summernote"></textarea>
         </div>
+
+            <br>
+            <button class="buttonSub" type="submit">Submit</button>
+    </div>
+
         </form>
+    </div>
+
+        <script>
+            $(document).ready(function() {
+              $('#summernote').summernote({
+                height: 200,
+                disableDragAndDrop: true,
+                disableAutoParagraph: true,
+                callbacks: {
+                  onPaste: function(e) {
+                    var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                    e.preventDefault();
+                    document.execCommand('insertText', false, bufferText);
+                  },
+                  onKeydown: function(e) {
+                    if (e.keyCode === 13) {
+                      document.execCommand('insertHTML', false, '<br/><br/>');
+                      return false;
+                    }
+                  }
+                }
+              });
+            });
+        </script>
 </body>
 </html>

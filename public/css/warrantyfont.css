@@ -1,0 +1,16 @@
+p{
+    font-family: "roboto";
+    font-size: 18px;
+    color: white;
+}
+ul li {
+    color: white;
+    font-family: "roboto";
+    font-size: 17px;
+}
+.container h2{
+    color: #a80000;
+}
+.container h3{
+    color:#a80000;
+}

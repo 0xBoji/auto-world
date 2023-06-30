@@ -1,0 +1,26 @@
+.table .body_1{
+    background-color: rgb(248, 14, 14);
+    
+}
+.table .body_2{
+    border-color: black;
+}
+.table .body_1 td{
+    color: aliceblue;
+    
+}
+.content-detail img{
+    width: 95%;
+    border-radius: 15px;
+}
+.content-detail .content p{
+    background-color: #a80000;
+    width: 90%;
+    color: antiquewhite;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 5px;
+}
+.content-detail{
+    margin-top: 50px;
+}

@@ -1,0 +1,46 @@
+        .scrollable-table {
+            max-height: 600px; /* Chiều cao tối đa của bảng */
+            overflow: auto; /* Tạo thanh cuộn khi nội dung vượt quá chiều cao */
+        }
+        #logout {
+            position: fixed;
+            bottom: 0;
+        }
+        #admin {
+            position: fixed;
+            bottom: 59px;
+        }
+        label, input, textarea{
+            display: block;	
+        }
+        input, textarea{
+            width: 500px;	
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-family: 'Sniglet', cursive;
+            font-size: 1em;
+            color: #676767;
+            transition: border 0.5s;
+            -webkit-transition: border 0.5s;
+            -moz-transition: border 0.5s;
+            -o-transition: border 0.5s;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;
+                
+            }
+        textarea{
+            height: 100px;	
+            resize: none; 
+            overflow: auto;
+        }
+        #text{
+            color: #ffffff;
+        }
+        #text1{
+            color:rgb(255, 255, 255);
+        }
+        a{
+            text-decoration: none;
+        }

@@ -12,6 +12,7 @@ class CompareCar extends Model
     protected $table = 'compare_cars';
 
     protected $fillable = [
+        'brands',
         'image',
         'body_style',
         'engine_type',
@@ -22,5 +23,6 @@ class CompareCar extends Model
         'number_of_doors',
         'price',
         'origin',
+        'description',
     ];
 }

@@ -1,0 +1,156 @@
+.heading{
+    text-align: center;
+}
+
+.heading p {
+    font-size: 0.938rem;
+    font-weight: 300;
+}
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.cars-container .box {
+    flex: 1 1 17rem;
+    position: relative;
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.cars-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.cars-container .box img:hover {
+transform: scale(1.1);
+transition: 0.5s;
+}
+.cars-container .box h2{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: white;
+    padding: 8px;
+    border-radius: 0.5rem;
+}
+.cars-container .box:hover h2{
+    background: red;
+    color: white;
+}
+#nut{
+    margin-top: 50px;
+    margin-left: 87%;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    border: 0.5rem;
+    background-color: rgb(182, 32, 32);
+}
+#nut a{
+    color: #fcfbfb;
+}
+#nut:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+#nut a:hover{
+    color: white;
+}
+
+.carsfont{
+    font-size: 48px;
+	font-family: sans-serif;
+	padding-bottom: 30px;
+    color: red;
+}
+.carsh2{
+    font-size: 30px;
+	font-family: sans-serif;
+	padding-bottom: 30px;
+    color: red;
+}
+
+/* all cars */
+
+.parts-container{
+    
+    margin-top: 2rem;
+    margin-left: 45px;
+
+}
+.parts-container .box{
+    padding: 1px;
+    background: #0c0b0b;
+    border-radius: 0.5rem;
+
+}
+.parts-container .box:hover {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 1px rgb(45, 43, 43);
+    transition: 0.7s;
+    }
+.parts-container .box img{
+    width: 100%;
+    box-shadow: 20px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+.parts-container .box h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+.parts-container .box h3:hover{
+    direction: underline;
+    font-size: 115%;
+    
+}
+.parts-container .box span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.parts-container .box .bx{
+    margin-bottom: 10px;
+    color: red;
+}
+.parts-container .box .btn{
+    max-width: 100px;
+    color:black ;
+}
+.parts-container .box .btn:hover{
+    color: white;
+}
+.parts-container .box .details{
+    display: flex;
+    align-items: center;
+    bottom: 1.8rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: white;
+    margin-top: 20px;
+    margin-left:60% ;
+}
+.parts-container .box .details:hover{
+    color: red;
+    direction: unset;
+}
+
+.btn:hover{
+    color: white;
+}
+#heght{
+    height: 50%;
+}

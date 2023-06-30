@@ -1,0 +1,82 @@
+.introduce{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    width: 1000px;
+    margin-left: 363px;
+}
+
+/* chữ giới thiệu tiêu đề */
+.box-title {
+font-family: 'Roboto', sans-serif;
+color: #b62831;
+display: inherit;
+font-weight: 500;
+margin-bottom: 15px;
+font-size: 30px;
+text-align: center;
+border-left: 5px solid #b62831;
+line-height: 1.5;
+}
+
+.noidung{
+    text-align: justify;
+    font-family: '-apple-system','BlinkMacSystemFont',"Segoe UI",'Roboto',"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: black;
+    font-size: 20px;
+}
+
+.noidung p{
+    padding-left: 30px;
+    padding-right: 35px;
+}
+
+/* caption ảnh */
+.captiontext{
+    color: #868686;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    display: block;
+    font-style: italic;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Ảnh content */
+.content1 {
+    background-image: url(../img/content1.jpg);
+    width: 757px;
+    height: 568px;
+    margin-left: 125px;
+}
+.content2 {
+    background-image: url(../img/content2.jpg);
+    width: 900px;
+    height: 630px;
+    margin-left: 30px;
+}
+.content3 {
+    background-image: url(../img/content3.jpg);
+    width: 710px;
+    height: 473px;
+    margin-left: 128px;
+}
+.content4 {
+    background-image: url(../img/content4.jpg);
+    width: 768px;
+    height: 316px;
+    margin-left: 108px;
+}
+.content5 {
+    background-image: url(../img/content5.jpg);
+    width: 900px;
+    height: 601px;
+    margin-left: 35px;
+}
+.content6 {
+    background-image: url(../img/content6.jpg);
+    width: 800px;
+    height: 536px;
+    margin-left: 80px;
+}

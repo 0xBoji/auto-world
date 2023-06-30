@@ -22,10 +22,25 @@ use App\Http\Controllers\CompareCarController;
 Route::get('/test', function () {
     return view('test');
 });
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/homepage', function () {
+    return view('homepage.index');
 });
+Route::get('/test', function () {
+    return view('test');
+});
+Route::get('/', function () {
+    return view('homepage.index');
+});
+Route::get('/car', function () {
+    return view('homepage.car');
+});
+Route::get('/about', function () {
+    return view('homepage.about');
+});
+Route::get('/contact', function () {
+    return view('homepage.contact');
+});
+
     
 Route::post('/cars', [AutoworldCRUD::class, 'store'])->name('cars.store');
 

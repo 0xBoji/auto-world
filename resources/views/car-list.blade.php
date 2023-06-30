@@ -54,17 +54,6 @@
             overflow: auto; /* Tạo thanh cuộn khi nội dung vượt quá chiều cao */
         }
     </style>
-    <script>
-        var dropdown = document.querySelector('.dropdown');
-    
-        dropdown.addEventListener('mouseenter', function () {
-            dropdown.classList.add('show');
-        });
-    
-        dropdown.addEventListener('mouseleave', function () {
-            dropdown.classList.remove('show');
-        });
-    </script>
  <div id="mySidenav" class="sidenav">
 	<p class="logo"><span>AutoWorld</span></p>
   <a id="point" href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
