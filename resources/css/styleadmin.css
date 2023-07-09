@@ -157,7 +157,6 @@ body{
 	margin-left: 10px;
 }
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   
@@ -253,16 +252,30 @@ td, th {
   text-decoration: none;
  }
 
- input[type="text"],
+  #create input[type="text"],
     select {
-        margin-right:0px;
+        margin-right:20px;
         left:10%;
-        width: 20%;
+        width: 70%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         margin-bottom: 10px;
+        
+    }
+
+  #edit input[type="text"],
+    select {
+        margin-right:20px;
+        left:10%;
+        width: 70%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        
     }
 
     /* Style the submit button */
@@ -300,4 +313,8 @@ td, th {
   z-index: 100;
   font-weight: 700;
   font-size: 2em;
+}
+
+.post{
+  margin-right: 20px;
 }

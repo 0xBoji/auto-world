@@ -20,3 +20,20 @@ $(".nav2").click(function(){
    $(".nav").css('display','block');
     $(".nav2").css('display','none');
 });
+function validateCarPrice(input) {
+  const value = input.value.toString();
+  if (value.length > 20) {
+      input.setCustomValidity("Car Price must not exceed 20 digits");
+  } else {
+      input.setCustomValidity("");
+  }
+  }
+
+  function validateForm() {
+var fileInput = document.getElementById("upload");
+if (fileInput.files.length === 0) {
+alert("Image can't be null");
+return false; // Prevent form submission
+}
+return true; // Proceed with form submission 
+  };

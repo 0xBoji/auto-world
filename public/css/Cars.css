@@ -79,19 +79,21 @@ transition: 0.5s;
 
 .parts-container{
     
-    margin-top: 2rem;
-    margin-left: 45px;
+    
+    margin-right: 5%;
+    padding: 10px;
 
 }
 .parts-container .box{
     padding: 1px;
     background: #0c0b0b;
     border-radius: 0.5rem;
+    padding-left: 7px;
 
 }
 .parts-container .box:hover {
-    transform: scale(0.99);
-    box-shadow: 2px 2px 1px rgb(45, 43, 43);
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 1px rgb(42, 41, 41);
     transition: 0.7s;
     }
 .parts-container .box img{

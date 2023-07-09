@@ -10,12 +10,16 @@ class AutoworldCRUDs extends Model
 
     protected $fillable = [
         'carImage',
+        'carImage2',
+        'carImage3',
+        'carImage4',
         'carName',
         'carBrand',
         'carID',
         'carModel',
         'carPrice',
         'carYear',
+        'carDescription'
     ];
 }
 

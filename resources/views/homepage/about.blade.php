@@ -36,7 +36,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="{{asset('css/about.css')}}">
 </head>
 
 <body>
@@ -90,19 +90,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <!-- nút search -->
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="cars/cars.html" class="nav-item nav-link">Cars</a>
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/about" class="nav-item nav-link active">About</a>
+                <a href="/car" class="nav-item nav-link">Cars</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="financialsupport.html" class="dropdown-item active">Financial Support</a>
-                        <a href="warranty.html" class="dropdown-item">Warranty Policy</a>
-                        <a href="partnerdirectory.html" class="dropdown-item">Partner Directory</a>
+                        <a href="/fin" class="dropdown-item active">Financial Support</a>
+                        <a href="/fin" class="dropdown-item">Warranty Policy</a>
+                        <a href="/" class="dropdown-item">Partner Directory</a>
                     </div>
                 </div>
-                <a href="blog.html" class="nav-item nav-link">Blog </a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="/blog" class="nav-item nav-link">Blog </a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -118,12 +118,12 @@
                 <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index">Home</a></li>
                         <li class="breadcrumb-item text-danger active" aria-current="page">About</li>
-                        <li class="breadcrumb-item"><a href="cars/cars.html">Cars</a></li>
-                        <li class="breadcrumb-item"><a href="financialsupport.html">Services</a></li>
-                        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-                        <li class="breadcrumb-item"><a href="contact.html">Contact</a></li>
+                        <li class="breadcrumb-item"><a href="/car">Cars</a></li>
+                        <li class="breadcrumb-item"><a href="/fin">Services</a></li>
+                        <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                        <li class="breadcrumb-item"><a href="/contact">Contact</a></li>
                     </ol>
                 </nav>
             </div>

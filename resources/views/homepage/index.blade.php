@@ -86,7 +86,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="/homepage" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
            <img src="{{ asset('img/W-removebg-preview.png') }}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -101,8 +101,8 @@
                     <p><input type="search" ng-model="test" class="searchh" id="myInput" placeholder="search here..."></p>
                     </div>
                 </div>
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="homepage" class="nav-item nav-link active">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
                 <a href="cars/cars.html" class="nav-item nav-link">Cars</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
@@ -115,7 +115,7 @@
                 <a href="blog.html" class="nav-item nav-link">Blog </a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="/compare" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -135,7 +135,7 @@
                                     <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">We'll Bring You The Best Services</h1>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                    <img class="img-fluid" src="../img/carousel-1.png') }}" alt="">
+                                    <img class="img-fluid" src="{{asset('img/carousel-1.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -177,146 +177,35 @@
         <div class="container">
             <h3 class="popularfont">Popular Makes</h3>
             <div id="directorypress-category-6025" class="cat-style-5">
-                <div class="row directorypress-categories-wrapper  clearfix" id="menubox">
-                    <!-- menu group 1 -->
-                    <div class="col-md-12">
-                        <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                            <div id="cat-wrapper-295" class="directorypress-category-holder clearfix">
-                                <div class="directorypress-parent-category">
-                                    <a href="#" title="Honda">
-                                        <span class="cat-icon">
-                                            <img class="directorypress-field-icon" src="{{ asset('img/hondalogo.jpg') }}" alt="honda">
-                                        </span>Honda
+                <div class="row directorypress-categories-wrapper clearfix" id="menubox">
+                    @php $count = 0; @endphp
+                    @foreach($uploadLogos as $uploadLogo)
+                        @if($count % 5 == 0)
+                            </div>
+                            <div class="row directorypress-categories-wrapper clearfix" id="menubox">
+                        @endif
+                
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <div class="directorypress-category-item address-showroom">
+                                <div class="directorypress-category-holder clearfix">
+                                    <div class="directorypress-parent-category">
+                                        <a href="#">
+                                            <span class="cat-icon">
+                                                <img class="directorypress-field-icon" src="{{ asset('uploadLogo/'. $uploadLogo->image) }}">
+                                            </span>
+                                            {{ $uploadLogo->brand }}
                                             <span class="categories-count"></span>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-    
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-280" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="Audi">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/audi-logo.png') }}" alt="Audi">
-                                                </span>Audi
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-279" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="BMW">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/bmw-logo.png') }}" alt="BMW">
-                                                </span>BMW
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-    
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-294" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="Ford">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/ford-logo.png') }}" alt="Ford">
-                                                </span>Ford
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-283" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="" title="Hyundai">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/Hyundai-Logo.png') }}" alt="Hyundai">
-                                                </span>Hyundai
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                    </div>
-
-                            <!-- menuaddress-showroom  group 2 -->
-                            <div class="col-md-12">
-                                
-    
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-288" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="toyota">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/toyotalogo.png') }}" alt="toyota">
-                                                </span>Toyota
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-285" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="Nissan">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/nissan-logo.png') }}" alt="Nissan">
-                                                </span>Nissan
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-281" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="Porsche">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/porche-logo.png') }}" alt="Porsche">
-                                                </span>Porsche
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-286" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="Suzuki">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/suzuki-logo.png') }}" alt="Suzuki">
-                                                </span>Suzuki
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="directorypress-category-item address-showroom col-md-2 col-sm-4 col-xs-12">
-                                    <div id="cat-wrapper-277" class="directorypress-category-holder clearfix">
-                                        <div class="directorypress-parent-category">
-                                            <a href="#" title="madza">
-                                                <span class="cat-icon">
-                                                    <img class="directorypress-field-icon" src="{{ asset('img/madzalogo.jpg') }}" alt="madza">
-                                                </span>madza
-                                                <span class="categories-count"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                
+                        @php $count++; @endphp
+                    @endforeach
                 </div>
+                
+
             </div>
             </div>		
             </div>
@@ -392,12 +281,12 @@
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
                     <i class="fa fa-users fa-2x text-white mb-3"></i>
                     <h2 class="text-whaddress-showroom ite mb-2 text-white" data-toggle="counter-up">2000</h2>
-                    <p class="text-white mb-0">Satisfied Clients</p>
+                    <p class="text-white mb-0">Satisfied Clients +</p>
                 </div>
                 <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
                     <i class="fa fa-car fa-2x text-white mb-3"></i>
                     <h2 class="text-whaddress-showroom ite mb-2 text-white" data-toggle="counter-up">1000</h2>
-                    <p class="text-white mb-0">Car Sold</p>
+                    <p class="text-white mb-0">Cars Sold +</p>
                 </div>
             </div>
         </div>

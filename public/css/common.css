@@ -1699,12 +1699,13 @@ only screen and (min-width: 320px) and (max-width: 480px) {
 	box-shadow: 0 0 30px rgba(0, 0, 0, .25)
 }
 .cat-style-5 .directorypress-category-holder .directorypress-parent-category a {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	text-transform: capitalize;
 	display: block;
 	text-align: center;
-	padding: 30px;
+	padding: 55px;
+
 }
 .cat-style-5 .directorypress-category-holder .directorypress-parent-category a .categories-count {
 	display: block;

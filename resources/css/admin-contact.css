@@ -16,9 +16,10 @@
         input, textarea{
             width: 500px;	
             border: none;
+            border-radius: 20px;
+
             outline: none;
             padding: 10px;
-            font-family: 'Sniglet', cursive;
             font-size: 1em;
             color: #676767;
             transition: border 0.5s;

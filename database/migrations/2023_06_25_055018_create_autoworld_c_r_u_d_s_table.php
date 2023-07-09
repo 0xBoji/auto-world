@@ -16,12 +16,17 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('carImage')->nullable();
-            $table->string('carName');
-            $table->string('carBrand');
-            $table->string('carID');
-            $table->string('carModel');
-            $table->string('carPrice');
-            $table->string('carYear');
+            $table->string('carImage2')->nullable();
+            $table->string('carImage3')->nullable();
+            $table->string('carImage4')->nullable();
+            $table->string('carName')->nullable();
+            $table->string('carBrand')->nullable();
+            $table->string('carID')->unique();
+            $table->string('carModel')->nullable();
+            $table->bigInteger('carPrice')->nullable(); // Thay đổi kiểu dữ liệu thành bigInteger()
+            $table->integer('carYear')->nullable();
+            $table->text('carDescription')->nullable();
+
         });
     }
 

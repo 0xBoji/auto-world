@@ -13,10 +13,12 @@ class CompareCar extends Model
 
     protected $fillable = [
         'brands',
+        'carName',
         'image',
         'body_style',
         'engine_type',
         'fuel',
+        'color',
         'year_of_manufacture',
         'transmission',
         'seating_capacity',

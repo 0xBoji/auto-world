@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>CarServ - Car Repair HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- thư viện search icon -->
-    <link href="{{asset('img/favicon.ico')}}" rel="icon">
+    <link href="../../img/favicon.ico" rel="icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="{{asset('css/style1.css') }}" rel="stylesheet">
-    <link href="{{asset('css/phantrang.css') }}" rel="stylesheet">
-    <link href="{{asset('js/jquery-3.6.3.min.js') }}" rel="stylesheet">
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/phantrang.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/jquery-3.6.3.min.js') }}" rel="stylesheet">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,20 +22,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="../..//tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- cars css -->
-    <link href="{{asset('css/Cars.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('ccs/blog.css')}}">
+    <link href="{{ asset('css/cars.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
     <!-- Template Stylesheet -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- danh muc san pham -->
+    <link href="{{ asset('css/checkbox.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -63,10 +65,10 @@
                     <small>24/7 Operation</small>
                 </div>
             </div>
-            <div class="col-lg-5 px-5 text-end">
+                <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-<small>+84338165083</small>
+                    <small>+84338165083</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=100024459408325"><i class="fab fa-facebook-f"></i></a>
@@ -82,8 +84,8 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="../index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="{{asset('img/W-removebg-preview.png')}}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
+        <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="{{ asset('img/W-removebg-preview.png') }}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -92,62 +94,6 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <!-- nút search -->
                 <i class='bx bx-search' id="search-icon"></i>
-                <div class="search-box container">
-                <div ng-app="myApp" ng-controller="namesCtrl">
-                    <p><input type="search" ng-model="test" class="searchh" id="myInput" placeholder="search here..."></p>
-                        <div id="search-test1" >
-                            <a href="car1.html">
-                                <div ng-repeat="x in names | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car2.html">
-                                <div ng-repeat="x in names1 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car3.html">
-                                <div ng-repeat="x in names2 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car4.html">
-                                <div ng-repeat="x in names3 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car5.html">
-                                <div ng-repeat="x in names4 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car6.html">
-                                <div ng-repeat="x in names5 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car7.html">
-                                <div ng-repeat="x in names6 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car8.html">
-                                <div ng-repeat="x in names7 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car9.html">
-                                <div ng-repeat="x in names8 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>
-                            <a href="car10.html">
-                                <div ng-repeat="x in names9 | filter:test" id="search-test" ng-if="test!=''">
-                                    {{ x }}
-                                </div>
-                            </a>                                                       
-                        </div>
-                    </div>
                 </div>
                 <a href="../index.html" class="nav-item nav-link">Home</a>
                 <a href="../about.html" class="nav-item nav-link">About</a>
@@ -170,7 +116,7 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../../img/carousel-bg-1.jpg);">
+ <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../../img/carousel-bg-1.jpg);">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center">
                 <br>
@@ -179,7 +125,7 @@
                     <ol class="breadcrumb justify-content-center text-uppercase">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="../about.html">About</a></li>
-<li class="breadcrumb-item text-danger active" aria-current="page">Cars</li>
+                        <li class="breadcrumb-item text-danger active" aria-current="page">Cars</li>
                         <li class="breadcrumb-item"><a href="../financialsupport.html">Services</a></li>
                         <li class="breadcrumb-item"><a href="../blog.html">Blog</a></li>
                         <li class="breadcrumb-item"><a href="../contact.html">Contact</a></li>
@@ -191,125 +137,113 @@
     <!-- Page Header End -->
 
     <!--Card section -->
-    <section class="parts card-content" id="parts" >
+    <section class="parts card-content" id="parts" >    
         <div class="heading">
             <span class="carsfont fontt">All Cars</span>
             <h2 class="carsh2 fontt">Information about vehicles</h2>
         </div>
         <!-- parts container -->
-        <div class="card">
-            <div class="parts-container container" >
-                <div class="row" id="myDIV">
-                    <!-- box1 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/civic.jpg" alt="">
-                        <h3><a href="car1.html">Honda Civic Type R 2023 (Limited)</a></h3>
-                        <i class='bx bxs-star'>(15 Review)</i>
-                        <a href="car1.html" class="details">View Details</a>
-                    </div>
-                    <!-- box2 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/audiden.jpg" alt="">
-                        <h3><a href="car2.html">Audi A7 2023</a></h3>
-                        <i class='bx bxs-star'>(13 Review)</i>
-                        <a href="car2.html" class="details">View Details</a>
-                    </div>
-                    <!-- box3 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/bmw.jpg" alt="">
-                        <h3><a href="car3.html">BMW 320i Sport 2023</a></h3>
-                        <i class='bx bxs-star'>(7 Review)</i>
-                        <a href="car3.html" class="details">View Details</a>
-                    </div>
-                    <!-- box4 --> 
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/Ford-Everest-3.jpg" alt="">
-                        <h3><a href="car4.html">Ford Everest 2023</a></h3>
-                        <i class='bx bxs-star'>(12 Review)</i>
-                        <a href="car4.html" class="details">View Details</a>
-                    </div>
+        <div class="row">
+            <div class="col-md-2">
+                <h3 class="fontt">Car Filter</h3>
+                <hr>
+                <div id="filter">
+                    <h5 class="fontt">Brand Car</h5>
+                    <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Honda
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>BMW
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Toyota
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Nissan
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Audi
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Mazda
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Suzuki
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Porche
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Hyundai
+                      </label>
+                      <label id="container">
+                        <input type="checkbox">
+                        <div class="checkmark"></div>Ford
+                      </label>
+                </div>
+                <hr>
+                <div class="filter">
+                    <h5 class="fontt">Year Of Production</h5>
+                    <div id="box">
+                        <select>
+                          <option>2014-2015</option>
+                          <option>2016-2017</option>
+                          <option>2018-2019</option>
+                          <option>2020-2021</option>
+                          <option>2022-2023</option>
+                        </select>
+                      </div>
+                </div>
+                <hr>
+                <div class="filter">
+                    <h5 class="fontt">Car Price</h5>
+                    <div id="boxin">
+                        <select>
+                          <option>500.000-1.000.000 VND</option>
+                          <option>1.500.000-2.000.000 VND</option>
+                          <option>2.500.000-3.000.000 VND</option>
+                          <option>3.500.000-4.000.000 VND</option>
+                          <option>4.500.000-5.000.000 VND</option>
+                        </select>
+                      </div>
                 </div>
             </div>
-            <div class="parts-container container" >
-                <div class="row" id="myDIV">
-                    <!-- box5 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/hyundaiac.jpg" alt="">
-                        <h3><a href="car5.html">Hyundai Accent 2023</a></h3>
-                        <i class='bx bxs-star'>(8 Review)</i>
-                        <a href="car5.html" class="details">View Details</a>
-                    </div>
-                    <!-- box6 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/toyotacr.jpg" alt="">
-                        <h3><a href="car6.html">Toyota Camry 2023</a></h3>
-                        <i class='bx bxs-star'>(10 Review)</i>
-                        <a href="car6.html" class="details">View Details</a>
-                    </div>
-                    <!-- box7 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/nis.jpg" alt="">
-                        <h3><a href="car7.html">Nissan Maxima 2023</a></h3>
-                        <i class='bx bxs-star'>(26 Review)</i>
-                        <a href="car7.html" class="details">View Details</a>
-                    </div>
-                    <!-- box8 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/po911.jpg" alt="">
-                        <h3><a href="car8.html">Porche Panamera 4S Executive</a></h3>
-                        <i class='bx bxs-star'>(5 Review)</i>
-                        <a href="car8.html" class="details">View Details</a>
-                    </div>
+            <div class="col-md-10">
+                <div class="card" id="carList">
+                    <div class="parts-container">
+                        <div class="row" id="myDIV">
+                            @foreach ($carlist as $car)
+                            <div class="box col-md-3">
+                                <img id="heght" src="../upload/{{$car->carImage }}" alt="">
+                                <h3><a href="car1.html">{{ $car->carName }}</a></h3>
+                                <i class='bx bxs-star'>{{ $car->carPrice }}</i>
+                                <a href="{{ route('autoworld_CRUDs.show', ['id' => $car->id]) }}" class="view">
+                                    <div class="default-btn">
+                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
+                                      <span>View</span>
+                                    </div>
+                                    <div class="hover-btn">
+                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg>
+                                      <span>View Car</span>
+                                    </div>
+                                    </a>
+                                    </div>
+                            @endforeach      
+                        </div>
+                    </div>    
                 </div>
             </div>
-            <div class="parts-container container" >
-                <div class="row" id="myDIV">
-                    <!-- box9 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/suzuki.jpg" alt="">
-                        <h3><a href="car9.html">Suzuki XL7 2023</a></h3>
-                        <i class='bx bxs-star'>(10 Review)</i>
-                        <a href="car9.html" class="details">View Details</a>
-                    </div>
-                    <!-- box10 -->
-                    <div class="box col-md-3">
-                        <img id="heght" src="../../img/maz6.jpg" alt="">
-                        <h3><a href="car10.html">Mazda 6 2023</a></h3>
-                        <i class='bx bxs-star'>(14 Review)</i>
-                        <a href="car10.html" class="details">View Details</a>
-                    </div>
-                    <!-- box11
-                    <div class="box col-md-3" id="carList">
-                        <img id="heght" src="img/maz6.jpg" alt="">
-                        <h3><a href="#"></a></h3>
-                        <i class='bx bxs-star'></i>
-                        <a href="#" class="details"></a>
-                    </div>
-                    box12
-                    <div class="box col-md-3" id="carList">
-                        <img id="heght" src="img/maz6.jpg" alt="">
-                        <h3><a href="#">${car.carName}</a></h3>
-                        <i class='bx bxs-star'></i>
-                        <a href="#" class="details"></a>
-                    </div> -->
-                </div>
-            </div>
-            
-        </div>
-            
-               
+        </div>    
     </section>
-    <div class="wrapper">
-        <ul>
-            <li class="btn"><i class="fas fa-angle-left"></i></li>
-            <li class="numb"><span>1</span></li>
-            <li class="numb active"><span>2</span></li>
-            <li class="numb"><span>3</span></li>
-            <li class="btn"><i class="fas fa-angle-right"></i></li>
-        </ul>
-    </div>
-      
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -342,7 +276,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Don't hesitate to contact us if you have any problem.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -368,7 +302,7 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+<!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -378,20 +312,22 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('lib/wow/wow.min.js') }}"></script>
-    <script src="{{asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{asset('lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{asset('lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/moment.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/easing.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/counterup.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/2745e261bc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
   
 
     <!-- Template Javascript -->
-    <script src="{{asset('js/main.js') }}"></script>
-    <script src="{{asset('js/mainn.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/mainn.js') }}"></script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@
     <style>
         .note-editor {
             background-color: #ffffff;
+            width: 70%;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,27 +20,25 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
-
     <div id="mySidenav" class="sidenav">
-        <p class="logo"><span>AutoWorld</span></p>
-        <a href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-        <a id="point" href="/admin/contact" class="icon-a"><i class="fa fa-address-card"></i> &nbsp;&nbsp;ContactCus</a>
-        <a href="/admin/compare" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Compare</a>
-        <a href="/admin/upload" class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Image</a>
-        <a id="admin" class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-            <i class="fa-solid fa-user-shield"></i>
-            &nbsp; {{ Auth::user()->name }} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="caret"></span>
-        </a>
-
-        <div>
-            <a id="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </div>
-    </div>
+		<p class="logo"><span>AutoWorld</span></p>
+        <a href="/admin/car-list" class="icon-a"><i class="fa-solid fa-bars"></i> &nbsp;&nbsp;Dashboard</a>
+		<a id="point" href="/admin/contact"class="icon-a"><i class="fa fa-address-card"></i> &nbsp;&nbsp;ContactCus</a>
+		<a  href="/admin/compare"class="icon-a"><i class="fa-solid fa-arrows-turn-to-dots"></i> &nbsp;&nbsp;Compare</a>
+		<a href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Logos</a>
+        <a  href="/admin/blog"class="icon-a"><i class="fa fa-book-open"></i> &nbsp;&nbsp;Add Blogs</a>
+		<a id="admin" class="icon-a" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fa-solid fa-user-shield"></i>
+			&nbsp; {{ Auth::user()->name }} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="caret"></span>
+		 </a>
+	
+		 <div>
+		 <a class="icon-a" id="logout" href="{{ route('logout') }}"  onclick="event.preventDefault();
+		 document.getElementById('logout-form').submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</a>
+		 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+		 @csrf
+		 </form>
+		 </div>
+	</div>
     <div id="main">
 
         <div class="head">
@@ -55,30 +54,26 @@
             <div class="row g-3">
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <label id="text" for="name">Name</label>
-                        <br>
-                        <input style="width:20%" type="text" name="name" placeholder="Your Name">
+                        <label id="text" for="name">Name:</label>
+                        <input style="width:20%" type="text" name="name" placeholder="Your Name" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <label id="text" for="email">Email</label>
-                        <br>
-                        <input style="width:20%; height: 40px;" type="email" name="email" placeholder="Your Email">
+                        <label id="text" for="email">Email:</label>
+                        <input style="width:20%; height: 40px;" type="email" name="email" placeholder="Your Email" required>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-floating">
-                        <label id="text" for="subject">Subject</label>
-                        <br>
-                        <input style="width:20%" type="text" name="subject" placeholder="Subject">
+                        <label id="text" for="subject">Subject:</label>
+                        <input style="width:20%" type="text" name="subject" placeholder="Subject" required>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-floating">
-                        <label id="text" for="message">Message</label>
-                        <br>
-                        <textarea class="note-editor" name="message" id="summernote"></textarea>
+                        <label id="text" for="message">Message:</label>
+                        <textarea class="note-editor" name="message" id="summernote" required></textarea>
                     </div>
                 </div>
                 <br>

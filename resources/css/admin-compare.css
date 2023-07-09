@@ -18,6 +18,7 @@
     }
 
     .custom-upload {
+        width:100px;
         display: inline-block;
         background-color: #e0e0e0;
         color: #333;
@@ -37,12 +38,23 @@
     .uploadfile{ 
         width: 13%;
     }
-    label, input, textarea{
-        display: block;	
+    label, input{
+        width: 30%;
+    }
+    textarea{
+        width: 70%;
     }
     #text{
         color: #ffffff;
     }
     #text1{
         color:aliceblue;
+    }
+
+    /* post */
+    .post-all .post{
+        margin-left: 5%;
+    }
+    .post{
+        margin-right: 20px;
     }

@@ -3,15 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CarServ - Car Repair HTML Template</title>
+    <title>Contact Page</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- thư viện search icon -->
-    <link href="{{asset('img/favicon.ico')}}" rel="icon">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="{{asset('css/style1.css') }}" rel="stylesheet">
+    <!-- template CSS -->
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet"/>
+
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -62,10 +61,10 @@
                     <small>+84 778067776</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -75,29 +74,27 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="../img/W-removebg-preview.png" alt="" style="height:250px; margin-top: 20px; width: 70%;">
+        <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="{{ asset('img/W-removebg-preview.png') }}" alt="" style="height:250px; margin-top: 20px; width: 70%;">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- nút search -->
-                
-                <a href="index.html" class="nav-item nav-link ">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="cars/cars.html" class="nav-item nav-link">Cars</a>
+                <a href="/" class="nav-item nav-link ">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="" class="nav-item nav-link">Cars</a>
                 <div class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="financialsupport.html" class="dropdown-item active">Financial Support</a>
-                        <a href="warranty.html" class="dropdown-item">Warranty Policy</a>
-                        <a href="partnerdirectory.html" class="dropdown-item">Partner Directory</a>
+                        <a href="/financialsupport" class="dropdown-item">Financial Support</a>
+                        <a href="/warranty" class="dropdown-item">Warranty Policy</a>
+                        <a href="/partnerdirectory" class="dropdown-item">Partner Directory</a>
                     </div>
                 </div>
-                <a href="blog.html" class="nav-item nav-link">Blog</a>
-                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                <a href="/blog" class="nav-item nav-link">Blog</a>
+                <a href="/contact" class="nav-item nav-link active">Contact</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Compare<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -140,33 +137,29 @@
                         <div class="col-md-4">
                             <div class="bg-light d-flex flex-column justify-content-center p-4">
                                 <h5 class="text-uppercase">// Booking //</h5>
-                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
+                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>AutoBook@gmail.com</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="bg-light d-flex flex-column justify-content-center p-4">
                                 <h5 class="text-uppercase">// General //</h5>
-                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>Autoworld@gmail.com</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="bg-light d-flex flex-column justify-content-center p-4">
-                                <h5 class="text-uppercase">// Technical //</h5>
-                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
+                                <h5 class="text-uppercase">// Support //</h5>
+                                <p class="m-0"><i class="fa fa-envelope-open text-primary me-2"></i>AutoSupport@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d62454.95547103331!2d108.3794851351165!3d11.944375100675916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m5!1s0x31716cd14ee3fb25%3A0x8cf0edaf9203f99a!2zMzEgxJDGsOG7nW5nIEzDqiBMYWksIFBoxrDhu51uZyA1LCBUaMOgbmggcGjhu5EgxJDDoCBM4bqhdCwgTMOibSDEkOG7k25nLCBWaeG7h3QgTmFt!3m2!1d11.9443781!2d108.42068499999999!4m0!5e0!3m2!1svi!2sus!4v1686903086393!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-md-6">
                     <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <form action="" method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -183,7 +176,7 @@
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        <label for="subject">Message Tittle</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -193,7 +186,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit" onclick="sendmessage()">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -203,6 +196,13 @@
         </div>
     </div>
     <!-- Contact End -->
+
+    <!-- Self Destruct Button -->
+    <script>
+        function sendmessage(){
+            alert('Thank You For Sending Us, We Will Get Back To You Soon.')
+        }
+    </script>
 
 
     <!-- Footer Start -->
@@ -215,10 +215,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+84 778067776</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>Autoworld@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -230,14 +230,14 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="financialsupport.html">Financial Support</a>
-                    <a class="btn btn-link" href="warranty.html">Insurance/warranty Policy </a>
-                    <a class="btn btn-link" href="partnerdirectory.html">Partner Directory</a>
-                    <a class="btn btn-link" href="contact.html">Online Counseling</a>
+                    <a class="btn btn-link" href="/financialsupport">Financial Support</a>
+                    <a class="btn btn-link" href="/warranty">Insurance/warranty Policy </a>
+                    <a class="btn btn-link" href="/partnerdirectory">Partner Directory</a>
+                    <a class="btn btn-link" href="/contact">Online Counseling</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Don't hesitate to contact us if you have any problem.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -253,10 +253,10 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a href="/">Home</a>
+                            <a href="https://vi.wikipedia.org/wiki/Cookie_(tin_học)">Cookies</a>
+                            <a href="/contact">Help</a>
+                            <a href="https://fqas.org">FQAs</a>
                         </div>
                     </div>
                 </div>
@@ -273,16 +273,17 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('lib/wow/wow.min.js') }}"></script>
-    <script src="{{asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{asset('lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{asset('lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/moment.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
-    <script src="{{asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/easing.min.js') }}"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/counterup.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
     <!-- Template Javascript -->
-    <script src="{{asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

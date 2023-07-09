@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\AutoworldCRUDs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -8,13 +9,55 @@ use Illuminate\Contracts\View\View;
 
 
 class AutoworldCRUD extends Controller
-{
+{   
+    public function show($id)
+    {
+        $car = DB::table('autoworld_CRUDs')->where('id', $id)->first();
+    
+        return view('homepage.view', compact('car'));
+    }
+        
+
     public function store(Request $request)
     {
         
-        $car = AutoworldCRUDs::create($request->all());
-        return redirect('/admin/car-list');
+            $file = $request->file('carImageup');
+            $filename = $file->getClientOriginalName();
+            $file->move(public_path('upload'), $filename);
+            $file2 = $request->file('carImageup2');
+            $filename2 = $file2->getClientOriginalName();
+            $file2->move(public_path('upload'), $filename2);
+            $file3 = $request->file('carImageup3');
+            $filename3 = $file3->getClientOriginalName();
+            $file3->move(public_path('upload'), $filename3);
+            $file4 = $request->file('carImageup4');
+            $filename4 = $file4->getClientOriginalName();
+            $file4->move(public_path('upload'), $filename4);
+    
+
+        $carID = $request->input('carID');
+
+        if (AutoworldCRUDs::where('carID', $carID)->exists()) {
+            return redirect('/admin/car-list')->with('error', 'Car ID already exists');
+        }
+
+        $car = new AutoworldCRUDs;
+        $car->carImage = $filename;
+        $car->carName = $request->input('carName');
+        $car->carBrand = $request->input('carBrand');
+        $car->carID = $carID;
+        $car->carModel = $request->input('carModel');
+        $car->carPrice = $request->input('carPrice');
+        $car->carYear = $request->input('carYear');
+
+        // ...
+
+        $car->save();
+
+        return redirect('/admin/car-list')->with('success', 'Car created successfully');
     }
+
+
 
     public function create()
     {
@@ -49,6 +92,9 @@ class AutoworldCRUD extends Controller
         $car->carYear = $request->input('carYear');
         $car->carModel = $request->input('carModel');
         $car->carImage = $request->input('carImage');
+        $car->carDescription = $request->input('carDescription');
+
+        
         $car->save();
 
         return redirect('/admin/car-list')->with('success', 'Car updated successfully');
@@ -63,24 +109,19 @@ class AutoworldCRUD extends Controller
         return redirect('/admin/car-list')->with('success', 'Xóa thành công!');
     }
     public function upload(Request $request)
-{
-    $data = DB::table('autoworld_CRUDs')->get();
-    return view('app')->with('data', $data);
-}
-    
-public function doupload(Request $request)
-{
-    if ($request->hasFile('avatar')) {
-        $file = $request->file('avatar');
-        $filename = $file->getClientOriginalName();
-        $file->storeAs('upload', $filename);
-        $file->move(public_path('upload'), $filename);
-    } else {
-        // Người dùng không chọn tệp tin, hiển thị thông báo "image null"
-        return "image null";
+    {
+        $data = DB::table('autoworld_CRUDs')->get();
+        return view('app')->with('data', $data);
     }
-    
-    return redirect('/admin/upload');
-}
+    public function checkDuplicateId(Request $request)
+{
+    $carID = $request->input('carID');
 
+    // Kiểm tra xem ID đã tồn tại trong cơ sở dữ liệu hay chưa
+    $car = AutoworldCRUDs::where('carID', $carID)->first();
+
+    return response()->json([
+        'duplicate' => !empty($car)
+    ]);
+}
 }

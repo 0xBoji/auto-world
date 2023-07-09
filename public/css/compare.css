@@ -1,0 +1,98 @@
+.wrap-main-page{
+    padding-bottom: 0;
+    margin-top: 10px;
+    position: relative;
+}
+
+.pb15{
+    padding-bottom: 15px;
+}
+
+.mb5{
+    margin-bottom: 5px;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.box-content table{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.tbl-ger td, .tbl-ger th, .tbl-tn td.par{
+    border: #ddd 1px solid;
+    padding: 5px 10px;
+    color: white;
+}
+
+.tbl-compare-form td, .tbl-body-compare td, .tbl-body-compare th{
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.form-sosanh{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.table-title{
+    color: white;
+}
+
+.box-title{
+    padding-top: 10px;
+    position: relative;
+    max-height: 35px;
+}
+
+.box-title ul{
+    margin-left: -10px;
+    list-style: none;
+}
+
+.have-tab .box-title ul li{
+    float: left;
+}
+
+.box-title ul li{
+    padding: 6px 10px;
+    position: relative;
+}
+
+.white-color{
+    color: #fff;
+}
+
+.sevenMainTitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.othongso{
+    padding: -1px -2px -1px -1px;
+}
+
+.tbl-body-compare th, .tbl-body-compare td.alleft{
+    text-align: left;
+    padding-left: 23px;
+    font-weight: bold;
+}
+
+.clearfix, .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}

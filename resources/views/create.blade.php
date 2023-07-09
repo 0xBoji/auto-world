@@ -11,27 +11,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-    .uploadfile {
-        display: none; /* Hide the default file input */
-    }
+        <style>
+        .button-wrap {
+            position: relative;
+            display: inline-block;
+        }
 
-    .custom-upload {
-    display: inline-block;
-    background-color: #e0e0e0;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #584ee1;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            pointer-events: none;
+        }
 
-    .custom-upload:hover {
-    background-color: #ccc;
-    }
+        .upload {
+            opacity: 0;
+            position: absolute;
+            top: 0;            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .custom-upload {
+        display: inline-block;
+        background-color: #e0e0e0;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        }
 
-    .file-name {
-    margin-top: 8px;
-    }
+        .custom-upload:hover {
+        background-color: #ccc;
+        }
+
+        .file-name {
+        margin-top: 8px;
+        }
 
         #text{
             color: #fffefe;
@@ -52,6 +72,9 @@
 
 <body>
     <style>
+         input, select{
+            border-radius: 10px;
+        }
         #logout {
         position: fixed;
         bottom: 0;
@@ -65,33 +88,36 @@
     
     </style>
     <script>
-        function validateForm() {
-		var fileInput = document.getElementById("upload");
-		if (fileInput.files.length === 0) {
-			alert("Image can't be null");
-			return false; // Prevent form submission
-		}
-		return true; // Proceed with form submission 
-    }
+        function validateCarPrice(input) {
+        const value = input.value.toString();
+        if (value.length > 13) {
+            input.setCustomValidity("Car Price must not exceed 13 digits");
+        } else {
+            input.setCustomValidity("");
+        }
+        }
+        
     </script>
+    
 	<div id="mySidenav" class="sidenav">
 	<p class="logo"><span>AutoWorld</span></p>
-    <a id="point" href="/admin/car-list" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-	<a  href="/admin/contact"class="icon-a"><i class="fa fa-address-card"></i> &nbsp;&nbsp;ContactCus</a>
-	<a href="/admin/compare"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Compare</a>
-	<a  href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Image</a>
-    <a id="admin" class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fa-solid fa-user-shield"></i>
+    <a id="point"  href="/admin/car-list" class="icon-a"><i class="fa-solid fa-bars"></i> &nbsp;&nbsp;Dashboard</a>
+    <a href="/admin/contact"class="icon-a"><i class="fa fa-address-card"></i> &nbsp;&nbsp;ContactCus</a>
+    <a href="/admin/compare"class="icon-a"><i class="fa-solid fa-arrows-turn-to-dots"></i> &nbsp;&nbsp;Compare</a>
+    <a href="/admin/upload"class="icon-a"><i class="fa fa-image"></i> &nbsp;&nbsp;Add Logos</a>
+    <a href="/admin/blog"class="icon-a"><i class="fa fa-book-open"></i> &nbsp;&nbsp;Add Blogs</a>
+    <a id="admin" class="icon-a" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fa-solid fa-user-shield"></i>
         &nbsp; {{ Auth::user()->name }} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span class="caret"></span>
      </a>
 
      <div>
-     <a id="logout" href="{{ route('logout') }}"  onclick="event.preventDefault();
+     <a class="icon-a" id="logout" href="{{ route('logout') }}"  onclick="event.preventDefault();
      document.getElementById('logout-form').submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</a>
      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
      @csrf
      </form>
      </div>
-</div>
+    </div>
 <div id="main">
 
 	<div class="head">
@@ -104,44 +130,35 @@
 	<div class="clearfix"></div>
 </div>
 	<br/><br/>
-    <form method="post" action="/create" enctype="multipart/form-data">
-        @csrf
-        <br>
-        <br>
-        <label class="custom-upload" for="avatar">Choose a file</label>
-        <input class="uploadfile" id="avatar" name="avatar" onchange="displayFileName(this)" type="file">
-        <span class="file-name" id="file-name"></span>
-      </form>
-      
 	<div class="col-div-8">
-    			<br/>
 
-            <form action="{{ route('cars.store') }}" method="POST">
+            <form action="{{ route('cars.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <script>
-                    function displayFileName(input) {
-                        var fileName = input.files[0].name;
-                        document.getElementById('carImage').setAttribute('value', fileName);
-                    }
-                </script>
                 <div class="container">
                         <div class="row">
-                                    <label id="text" for="carImage">Car Images:</label>
-                                    <br>
-                                    <div>
-                                        <input type="text" name="carImage" id="carImage"onchange="displayFileName(this)">
+                            <br>
+                                        <br>
+                                       
+                                    <div class="button-wrap">
+                                        <label class="button" for="upload">Upload File <br></label>
+                                        <input class="upload" id="carImageup" name="carImageup" type="file" required>
                                     </div>
+                                    <br>
                                     <label id="text" for="carName">Car name:</label>
                                     <br>
-                                    <input type="text" name="carName" placeholder="Car Name">
+                                    <input style="width:20%; height:35px" required type="text" name="carName" placeholder="Car Name">
                                     <br>
                                         <label id="text">ID Car:</label>
                                     <br>
-                                    <input type="text" name="carID" placeholder="Car ID">
+                                    <input style="width:20%; height:35px" id="carID" required type="text" name="carID" placeholder="Car ID" pattern="\d+" maxlength="10">
                                     <br>
-                                    <label id="text" for="carBrand">Brand:</label>
+                                    <label id="text" for="carPrice">Car Price:</label>
                                     <br>
-                                    <select name="carBrand" id="carBrand">
+                                    <input style="width: 20%; height: 35px;" type="number" name="carPrice" placeholder="Car Price" min="100000000" step="100000000" oninput="validateCarPrice(this)" required>
+                                    <br>
+                                    <label id="text" for="CarYear">Car Year:</label>
+                                    <br>
+                                    <select style="width:20.5%; height:40px" name="carBrand" id="carBrand">
                                         <option value="Toyota">Toyota</option>
                                         <option value="Ford">Ford</option>
                                         <option value="Honda">Honda</option>
@@ -154,14 +171,9 @@
                                         <option value="Mazda">Mazda</option>
                                     </select>
                                     <br>
-                                    <label id="text" for="carPrice">Car Price</label>
+                                    <label  id="text" for="carBrand">Brand Car:</label>
                                     <br>
-                                    <input type="text" name="carPrice" placeholder="Car Price">
-                                    <br>
-                                    <label id="text" for="CarYear">Car Year</label>
-                                    <br>
-                                        <!-- Thêm các tùy chọn khác -->
-                                    <select name="carYear" id="CarYear">
+                                    <select style="width:20.5%; height:40px" name="carYear" id="CarYear">
                                         <option value="2014">2014</option>
                                         <option value="2015">2015</option>
                                         <option value="2016">2016</option>
@@ -175,7 +187,7 @@
                                     <br>
                                     <label id="text" for="carModel">Car Model:</label>
                                     <br>
-                                    <select name="carModel" id="CarModel">
+                                    <select style="width:20.5%; height:40px" name="carModel" id="CarModel">
                                         <option value="Sedan">Sedan</option>
                                         <option value="SUV">SUV</option>
                                         <option value="Crossover">Crossover</option>
@@ -197,7 +209,6 @@
             <br>
             <br>
 	    </div>
-  
 </div>
 </body>
 </html>
